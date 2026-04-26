@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -50,6 +51,8 @@ export default function RootLayout({
         <link rel="canonical" href="/" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0a0a0a" />
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8159344073070790" crossorigin="anonymous"></script>
         {/* Inline script to set dark mode before React hydration to prevent flash & hydration mismatch */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
